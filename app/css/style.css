@@ -1,0 +1,26 @@
+@font-face {
+}
+@font-face {
+}
+html,
+body {
+  line-height: 1.4;
+  font-weight: 400;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizng: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: color .3s linear;
+  -o-transition: color .3s linear;
+  transition: color .3s linear;
+}
+a:hover {
+  text-decoration: none;
+}
+/*** HEADER ***/
+/*** PAGE CONTENT ***/
+/*** FOOTER ***/
