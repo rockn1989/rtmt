@@ -1,6 +1,6 @@
 html,
 body {
-  //font-family: @firaSans;
+  font-family: @museoSans;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -16,5 +16,18 @@ a {
   transition: color .3s linear;
   &:hover {
     text-decoration: none;
+  }
+}
+
+svg {
+  transition: fill .3s linear;
+}
+
+.uk-container {
+  margin: 0 auto;
+  padding: 0;
+  @media @desk-w {
+    padding: 0 15px;
+    max-width: 1140px;
   }
 }
