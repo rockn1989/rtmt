@@ -28,4 +28,16 @@ $('#mobile-form').on('click', function() {
 	$('.mobile-form').fadeToggle('350');
 });
 
+/*** FOOTER TOGGLE LIST MOBILE ***/
+
+$('[data-role="toggle-list"]').on('click', function() {
+	if($(window).width() <= 767) {
+		$(this)
+			.siblings('[data-role="target-list"]')
+			.slideToggle('350', function() {
+				$(this).toggleClass('hidden').removeAttr('style')
+			});
+	}
+});
+
 });

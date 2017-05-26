@@ -15,7 +15,7 @@ a {
   text-decoration: none;
   transition: color .3s linear;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -25,9 +25,12 @@ svg {
 
 .uk-container {
   margin: 0 auto;
-  padding: 0;
   @media @desk-w {
     padding: 0 15px;
     max-width: 1140px;
   }
+}
+
+.hidden {
+  display: none;
 }
