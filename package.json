@@ -1,0 +1,40 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "default",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "build": "gulp build",
+    "removefill": "gulp removeSvgFill",
+    "imgmin": "gulp images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockn1989"
+  },
+  "author": "Artem Ryabkov",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cheerio": "latest",
+    "gulp-copy": "latest",
+    "gulp-csso": "latest",
+    "gulp-html-replace": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-less": "latest",
+    "gulp-rename": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-svgstore": "latest",
+    "run-sequence": "latest"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-remove-files": "0.0.3",
+    "gulp-svg-sprite": "^1.3.6"
+  }
+}
