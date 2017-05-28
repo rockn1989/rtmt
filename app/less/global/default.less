@@ -1,19 +1,17 @@
-html,
-body {
+body,
+table {
   font-family: @museoSans;
   line-height: 1.4;
   font-weight: 400;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizng: border-box;
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  transition: color .3s linear;
+  transition: all .3s linear;
   &:hover {
     text-decoration: underline;
   }
@@ -33,4 +31,53 @@ svg {
 
 .hidden {
   display: none;
+}
+
+.title {
+  &&--h1 {
+    margin: 15px 0 30px;
+    color: #3b3b3b;
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
+.block-title {
+  width: 193px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  &&--vertical {
+    text-align: right;
+    position: absolute;
+    top: 173px;
+    left: 0;
+    padding-bottom: 20px;
+    transform: rotate(-90deg);
+    transform-origin: 0 center;
+    border-bottom: 3px solid #ffffff;
+  }
+}
+
+.content-title {
+  color: #3b3b3b;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.weight-border {
+  border: 10px solid #f1f1f1;
+}
+
+
+@media @mob-w {
+  .preview-news-block.uk-invisible {
+    display: block !important;
+    visibility: visible !important;
+    animation: none !important;
+  }
 }

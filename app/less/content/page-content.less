@@ -1,1 +1,349 @@
 /*** PAGE CONTENT ***/
+
+.content {
+  p {
+    color: #3b3b3b;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}
+
+.main-banner {
+  position: relative;
+  height: 565px;
+  background: url('../img/main-banner.jpg') center no-repeat;
+  background-size: contain;
+  margin-bottom: 50px;
+}
+
+.preview-news {
+  width: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  padding: 48px 44px;
+  color: #ffffff;
+  background-color: #006e72;
+  .preview-news-inner {
+    position: relative;
+    padding-left: 50px;
+    max-width: 530px;
+  }
+  .preview-news-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .preview-news-desc {
+    margin-bottom: 45px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}
+
+.read-more-link {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  &:hover {
+    color: #ffffff;
+    opacity: .7;
+  }
+}
+
+.innovations {
+
+}
+.innovations-desc {
+  position: relative;
+  margin: 0 0 0 auto;
+  padding: 70px 65px;
+  max-width: 946px;
+  p {
+    margin: 0 0 0 auto;
+    max-width: 360px;
+  }
+}
+
+
+/*** PREVIEW NEWS - MAIN PAGE ***/
+
+.preview-news-all {
+  padding: 80px 0 115px;
+  background-color: #f1f1f1;
+
+  @media @mob-w {
+    padding: 30px 0;
+  }
+
+  .preview-news-head {
+    margin-bottom: 80px;
+
+    @media @mob-w {
+      margin-bottom: 25px;
+    }
+
+    @media @tablet-w {
+      margin-bottom: 40px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .content-title {
+    float: left;
+    @media @mob-w {
+      float: none;
+    }
+  }
+  .news-all {
+    padding-top: 15px;
+    float: right;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @media @mob-w {
+      float: none;
+    }
+
+    a {
+      color: #006e72;
+    }
+  }
+  .preview-news-block {
+
+    @media @mob-w {
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #d2caca;
+    }
+
+    @media @tablet-w {
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      border: none;
+    }
+    a {
+      position: relative;
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: transparent;
+        transition: background .3s linear;
+        z-index: 5;
+      }
+      &:hover {
+        text-decoration: none;
+        &:after {
+          background: rgba(0, 0, 0, .6);
+        }
+        .preview-news-text {
+          display: block;
+        }
+        .news-date {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+      @media @mob-w {
+        &:hover {
+          &:after {
+            background: transparent;
+          }
+          .news-date {
+            &:after {
+              width: 0;
+            }
+          }
+        }
+        .news-date {
+          &:after {
+            width: 0;
+          }
+        }
+        img {
+          margin-bottom: 15px;
+        }
+        .preview-news-text {
+          position: static;
+          display: block;
+          color: #000;
+        }
+      }
+
+      @media @tablet-w {
+        &:hover {
+          &:after {
+            background: transparent;
+          }
+          .news-date {
+            &:after {
+              width: 0;
+            }
+          }
+        }
+        img {
+          margin-bottom: 0;
+          max-width: 40%;
+          float: left;
+        }
+        .preview-news-text {
+          padding-left: 25px;
+          position: static;
+          display: block;
+          color: #000;
+        }
+      }
+    }
+    .news-date {
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      border: none;
+      transition: border-width .3s linear;
+      z-index: 6;
+
+      @media @mob-w {
+        top: 0px;
+        left: 0px;
+        padding: 15px 15px 10px 15px;
+        background: rgba(0, 0, 0, .3);
+      }
+
+      @media @tablet-w {
+        top: 0px;
+        left: 0px;
+        padding: 15px 15px 10px 15px;
+        background: rgba(0, 0, 0, .3);
+        &:after {
+          width: 0;
+        }
+      }
+      &:after {
+        width: 0;
+      }
+    }
+    .preview-news-text {
+      position: absolute;
+      left: 35px;
+      bottom: 35px;
+      display: none;
+      max-height: 100px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      overflow: hidden;
+      z-index: 6;
+    }
+  }
+}
+
+.news-date {
+  position: relative;
+  padding-bottom: 25px;
+  max-width: 100px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #006e72;
+    z-index: 7;
+    transition: width .3s linear;
+  }
+  span {
+    display: block;
+  }
+}
+
+/*** PATHNERS SLIDER ***/
+
+.our-pathners {
+  margin-bottom: 70px;
+  .content-title {
+    margin-bottom: 50px;
+  }
+}
+.pathners-slider {
+  a {
+    display: block;
+    height: 95px;
+    text-align: center;
+    &:before {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      display: inline;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    width: auto;
+    height: auto;
+    z-index: 20;
+  }
+  .slick-prev {
+    left: -75px;
+
+    @media @mob-w {
+      left: -25px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1300px) {
+      left: 15px;
+    }
+  }
+  .slick-next {
+    right: -75px;
+
+    @media @mob-w {
+      right: -25px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1300px) {
+      right: 15px;
+    }
+  }
+  i {
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: #006e72;
+    }
+  }
+}
