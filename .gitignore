@@ -9,4 +9,4 @@ Thumbs.db
 *.pdf
 css/*.css
 build/
-img/symbols.svg
+img/icon-svg/sprite-svg.svg
