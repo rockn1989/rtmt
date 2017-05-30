@@ -74,10 +74,7 @@
 			.nav-list-sublist {
 				visibility: visible;
 				opacity: 1;
-				width: 250px;
 				top: 30px;
-				padding: 25px 30px;
-				animation: showMenu .3s linear;
 			}
 		}
 		@media (min-width: 960px) and (max-width: 1199px) {
@@ -98,13 +95,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		margin: 0;
-		//height: 0;
-		padding: 0;
+		width: 250px;
+		padding: 25px 30px;
 		opacity: 0;
 		visibility: hidden;
 		background-color: #006e72;
-		transition: top .3s, opacity .3s ease-out;
+		transition: top .3s, visibility 0s, opacity .3s ease-out;
 		z-index: 10;
 		li {
 			display: block;
@@ -127,15 +123,6 @@
 	}
 }
 
-
-@keyframes showMenu {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 .logo {
 	display: block;
@@ -169,7 +156,7 @@
 	@media (min-width: 768px) {
 		border: none;
 	}
-	
+
 	.uk-subnav {
 		li {
 			margin-top: 10px;
@@ -178,7 +165,7 @@
 			&:last-child {
 				margin-right: 0;
 			}
-			
+
 			@media (min-width: 320px) and (max-width: 600px) {
 				margin-right: 5px;
 			}
@@ -232,7 +219,7 @@
 	}
 
 	.icon-search-mobile {
-		margin-top: 7px;    
+		margin-top: 7px;
 	}
 
 	.icon-mail-mobile {
@@ -274,17 +261,17 @@
 		outline: none;
 		border: none;
 		transition: left .6s ease;
-		&::-webkit-input-placeholder { 
+		&::-webkit-input-placeholder {
 		  color: #7f7f7f;
 		  font-weight: 600;
 		}
-		&::-moz-placeholder { 
+		&::-moz-placeholder {
 		  color: #7f7f7f;
 		}
-		&:-ms-input-placeholder { 
+		&:-ms-input-placeholder {
 		  color: #7f7f7f;
 		}
-		&:-moz-placeholder { 
+		&:-moz-placeholder {
 		  color: #7f7f7f;
 		}
 	}

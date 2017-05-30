@@ -6,7 +6,7 @@ $(function() {
 
 $('.main-slider').slick({
 			arrows: false,
-			dots: false,
+			dots: true,
 			infinity: true,
 			autoplay: true,
 			autoplaySpeed: 2000,
@@ -43,7 +43,7 @@ $('.pathners-slider').slick({
 			arrows: true,
 			dots: false,
 			infinity: true,
-			//autoplay: true,
+			autoplay: true,
 			autoplaySpeed: 2000,
 			speed: 1200,
 			slidesToShow: 4,
