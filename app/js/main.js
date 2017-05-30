@@ -4,8 +4,43 @@ $(function() {
 
 /*** SLIDERS ***/
 
+$('.main-slider').slick({
+			arrows: false,
+			dots: false,
+			infinity: true,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			speed: 1200,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 940,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+
 $('.pathners-slider').slick({
-			arrow: true,
+			arrows: true,
 			dots: false,
 			infinity: true,
 			//autoplay: true,

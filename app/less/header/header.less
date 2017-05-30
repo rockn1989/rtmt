@@ -2,7 +2,7 @@
 /*** HEADER ***/
 
 .page-header {
-	padding: 20px 0;
+	padding: 20px 0 0;
 }
 
 .contacts {
@@ -30,8 +30,8 @@
 
 
 .page-nav-wrapper {
-	padding: 34px 0;
-	min-height: 114px;
+	padding: 34px 0 0;
+	//min-height: 114px;
 	.uk-grid {
 		position: relative;
 		&.header-title:after {
@@ -52,6 +52,7 @@
 }
 
 .nav-list {
+	margin-bottom: 0;
 	padding: 0;
 	list-style: none;
 	font-size: 0;
@@ -67,13 +68,16 @@
 		text-transform: uppercase;
 		color: #000000;
 		&:hover {
+			&>a {
+				opacity: .5;
+			}
 			.nav-list-sublist {
-				top: 30px;
-				display: block;
+				visibility: visible;
 				opacity: 1;
 				width: 250px;
-				height: auto;
+				top: 30px;
 				padding: 25px 30px;
+				animation: showMenu .3s linear;
 			}
 		}
 		@media (min-width: 960px) and (max-width: 1199px) {
@@ -92,13 +96,13 @@
 	}
 	.nav-list-sublist {
 		position: absolute;
-		top: -100px;
+		top: 0;
 		left: 0;
 		margin: 0;
-		width: 0;
-		height: 0;
+		//height: 0;
 		padding: 0;
 		opacity: 0;
+		visibility: hidden;
 		background-color: #006e72;
 		transition: top .3s, opacity .3s ease-out;
 		z-index: 10;
@@ -120,6 +124,16 @@
 				}
 			}
 		}
+	}
+}
+
+
+@keyframes showMenu {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -314,6 +328,7 @@
 .contacts-search,
 .contacts-mail {
 	&:hover {
+		text-decoration: none;
 		svg {
 			fill: #006f73;
 		}

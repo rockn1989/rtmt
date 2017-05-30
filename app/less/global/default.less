@@ -35,11 +35,18 @@ svg {
 
 .title {
   &&--h1 {
-    margin: 15px 0 30px;
+    margin: 30px 0;
     color: #3b3b3b;
     font-size: 48px;
     font-weight: 900;
     text-transform: uppercase;
+    @media @mob-w {
+    	font-size: 30px;
+    	line-height: 40px;
+    }
+    @media @tablet-w {
+    	font-size: 36px;
+    }
   }
 }
 
@@ -52,6 +59,9 @@ svg {
   line-height: 24px;
   text-transform: uppercase;
   border-bottom: 3px solid #ffffff;
+  @media @tablet-w {
+
+  }
   &&--vertical {
     text-align: right;
     position: absolute;
@@ -63,10 +73,14 @@ svg {
 }
 
 .content-title {
+	margin-bottom: 50px;
   color: #3b3b3b;
   font-size: 30px;
   font-weight: 900;
   text-transform: uppercase;
+  @media @tablet-w {
+  	margin-bottom: 15px;
+  }
 }
 
 .weight-border {
