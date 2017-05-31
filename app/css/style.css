@@ -71,7 +71,7 @@ svg {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .title.title--h1 {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 40px;
   }
 }
@@ -109,6 +109,11 @@ svg {
   font-weight: 900;
   text-transform: uppercase;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .content-title {
+    margin-bottom: 15px;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
   .content-title {
     margin-bottom: 15px;
@@ -118,11 +123,24 @@ svg {
   border: 10px solid #f1f1f1;
 }
 @media (min-width: 0) and (max-width: 767px) {
-  .preview-news-block.uk-invisible {
+  .preview-news-block.uk-invisible,
+  .img-title.uk-invisible {
     display: block !important;
     visibility: visible !important;
     -webkit-animation: none !important;
             animation: none !important;
+    opacity: 1;
+  }
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .preview-news-block,
+  .img-title,
+  .products-block {
+    display: block !important;
+    visibility: visible !important;
+    -webkit-animation: none !important;
+            animation: none !important;
+    opacity: 1;
   }
 }
 /*** HEADER ***/
@@ -273,6 +291,37 @@ svg {
   margin-top: 0;
   border-bottom: 3px solid #006e72;
 }
+.uk-grid.mobile-menu .uk-offcanvas-bar {
+  background: #ffffff;
+}
+.uk-grid.mobile-menu #offcanvas-menu .uk-nav li > ul {
+  padding-left: 35px;
+  display: none;
+}
+.uk-grid.mobile-menu #offcanvas-menu .uk-nav li a {
+  position: relative;
+  color: #006f73;
+}
+.uk-grid.mobile-menu #offcanvas-menu .uk-nav li svg.page-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform .3s linear;
+  transition: -webkit-transform .3s linear;
+  -o-transition: transform .3s linear;
+  transition: transform .3s linear;
+  transition: transform .3s linear, -webkit-transform .3s linear;
+  fill: #006f73;
+}
+.uk-grid.mobile-menu #offcanvas-menu .uk-nav li svg.page-icon.open {
+  -webkit-transform: rotate(90deg) translateX(-100%);
+      -ms-transform: rotate(90deg) translateX(-100%);
+          transform: rotate(90deg) translateX(-100%);
+}
 @media (min-width: 768px) {
   .uk-grid.mobile-menu {
     border: none;
@@ -280,8 +329,8 @@ svg {
 }
 .uk-grid.mobile-menu .uk-subnav li {
   margin-top: 10px;
-  float: right;
   margin-right: 15px;
+  float: right;
 }
 .uk-grid.mobile-menu .uk-subnav li:last-child {
   margin-right: 0;
@@ -547,6 +596,7 @@ svg {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .preview-news-all {
+    margin-bottom: 50px;
     padding: 30px 0;
   }
 }
@@ -1069,6 +1119,11 @@ svg {
 .our-manufac {
   position: relative;
   margin-bottom: 90px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .our-manufac {
+    margin-bottom: 50px;
+  }
 }
 .our-manufac .block-desc {
   margin: 0 auto 0 0;

@@ -102,6 +102,17 @@ $('#mobile-form').on('click', function() {
 	$('.mobile-form').fadeToggle('350');
 });
 
+/*** MOBILE LEFT MENU ***/
+
+$('.mobile-menu .uk-offcanvas svg.page-icon').on('click', function(e) {
+	e.preventDefault();
+	$(this)
+		.toggleClass('open')
+		.parent()
+		.siblings('ul')
+		.slideToggle('350');
+});
+
 /*** FOOTER TOGGLE LIST MOBILE ***/
 
 $('[data-role="toggle-list"]').on('click', function() {

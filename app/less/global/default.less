@@ -41,7 +41,7 @@ svg {
     font-weight: 900;
     text-transform: uppercase;
     @media @mob-w {
-    	font-size: 30px;
+    	font-size: 24px;
     	line-height: 40px;
     }
     @media @tablet-w {
@@ -78,6 +78,9 @@ svg {
   font-size: 30px;
   font-weight: 900;
   text-transform: uppercase;
+  @media @mob-w {
+  	margin-bottom: 15px;
+  }
   @media @tablet-w {
   	margin-bottom: 15px;
   }
@@ -89,9 +92,22 @@ svg {
 
 
 @media @mob-w {
-  .preview-news-block.uk-invisible {
+  .preview-news-block.uk-invisible,
+  .img-title.uk-invisible {
     display: block !important;
     visibility: visible !important;
     animation: none !important;
+    opacity: 1;
   }
+}
+
+.preview-news-block,
+.img-title,
+.products-block {
+	@media @mob-w {
+    display: block !important;
+    visibility: visible !important;
+    animation: none !important;
+    opacity: 1;
+	}
 }

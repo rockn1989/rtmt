@@ -14,13 +14,7 @@ var gulp = require("gulp"),
 		svgmin    = require("gulp-svgmin"),
 		svgSprite = require('gulp-svg-sprite'),
 		cheerio   = require("gulp-cheerio"),
-		clean     = require("gulp-clean"),
-		removeFiles = require('gulp-remove-files');
- 
-gulp.task('clearsvg', function () {
-  gulp.src('./app/img/icon-svg/sprite-svg.svg')
-    .pipe(removeFiles());
-});
+		clean     = require("gulp-clean");
 
 gulp.task("clean", function() {
 	return gulp.src('app/img/icon-svg/sprite-svg.svg')

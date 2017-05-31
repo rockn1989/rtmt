@@ -152,7 +152,35 @@
 	padding: 15px 0;
 	margin-top: 0;
 	border-bottom: 3px solid #006e72;
-
+	.uk-offcanvas-bar {
+		background: #ffffff;
+	}
+	#offcanvas-menu {
+		.uk-nav {
+			li {
+				&>ul{
+					padding-left: 35px;
+					display: none;
+				}
+				a {
+					position: relative;
+					color: #006f73;
+				}
+				svg.page-icon {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					width: 15px;
+					transform: translateY(-50%);
+					transition: transform .3s linear;
+					fill: #006f73;
+					&.open {
+						transform: rotate(90deg) translateX(-100%);
+					}
+				}
+			}
+		}
+	}
 	@media (min-width: 768px) {
 		border: none;
 	}
@@ -160,8 +188,8 @@
 	.uk-subnav {
 		li {
 			margin-top: 10px;
-			float: right;
 			margin-right: 15px;
+			float: right;
 			&:last-child {
 				margin-right: 0;
 			}
