@@ -1,6 +1,7 @@
-/*** PAGE CONTENT ***/
+/*** CONTENT ***/
 
 .content {
+	margin-bottom: 50px;
   p {
     color: #3b3b3b;
     font-size: 18px;
@@ -10,8 +11,6 @@
 }
 
 .main-slider {
-	//margin: 0 auto;
-	//max-width: 1140px;
 	@media @mob-w {
 		display: none;
 	}
@@ -880,5 +879,182 @@
 			background-position: center;
 			border: 20px solid #ffffff;
 		}
+	}
+}
+
+
+/*** BREADCRUMBS ***/
+
+.breadcrumbs {
+	ul {
+		padding: 0;
+		list-style: none;
+		li {
+			position: relative;
+	    padding-left: 22px;
+	    padding-right: 25px;
+	    display: inline-block;
+	    vertical-align: top;
+	    font-size: 13px;
+	    font-weight: 500;
+	    color: #7f7f7f;
+	    &:after {
+				content: '/';
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    display: block;
+	    }
+	    &:first-child {
+	    	padding-left: 0;
+	    }
+	    &:last-child {
+	    	&:after {
+	    		content: '';
+	    	}
+	    }
+	    a {
+	    	color: #7f7f7f;
+	    }
+		}
+	}
+}
+
+
+/***  CATALOG MENU ***/
+
+.catalog {
+	&>ul {
+		padding: 34px;
+		padding-bottom: 0;
+		border: 10px solid #f1f1f1;
+		list-style: none;
+		li.catalog-title {
+			margin-bottom: 30px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #f1f1f1;
+			&:last-child {
+				border: none;
+			}
+			&.active {
+				&>ul {
+					display: block;
+				}
+				>a {
+					border-bottom: 3px solid #006e72;
+				}
+			}
+			&>a {
+				position: relative;
+				padding-bottom: 15px;
+				display: block;
+				color: #006e72;
+				font-size: 16px;
+				font-weight: 900;
+				svg {
+					position: absolute;
+					top: 5px;
+					right: -20px;
+					stroke: #006e72;
+					fill: #006e72;
+					width: 10px;
+					height: 10px;
+					transform: rotate(-90deg);
+					transition: all .3s linear;
+					&.open {
+						transform: rotate(0);
+						width: 15px;
+						height: 15px;
+						stroke-width: 3px;
+						fill: #ffffff;
+					}
+				}
+			}
+			ul {
+				display: none;
+				padding: 0;
+				padding-top: 35px;
+				list-style: none;
+				li.uk-active {
+					a {
+						color: #3b3b3b;
+						font-weight: 900;
+					}
+				} 
+				a {
+					color: rgba(0, 110, 114, 0.75);
+					font-size: 14px;
+					font-weight: 300;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}
+
+
+/*** SPECIFICATIONS ***/
+
+.specifications {
+	color: #3b3b3b;
+	font-size: 18px;
+	line-height: 28px;
+	margin-bottom: 45px;
+	.option-name {
+		font-weight: 700;
+	}
+	.option-desc {
+		font-weight: 300;
+	}
+}
+
+/*** CERTIFICATE ***/
+
+.certificate {
+	margin-bottom: 45px;
+	padding: 43px 110px;
+	text-align: center;
+	border-bottom: 1px solid #f1f1f1;
+	background: rgba(241, 241, 241, 0.1) url('../img/certificate-bg.png') repeat;
+	.content-title {
+		text-align: center;
+		font-size: 18px;
+	}
+}
+
+.plan-product {
+	margin-bottom: 45px;
+}
+
+
+/*** TABLE SPECIFICATIONS ***/
+
+.table-specifications {
+	.content-title {
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
+	table {
+		margin-bottom: 30px !important;
+		display: block;
+		width: 100%;
+		border: 1px solid #006e72;
+		thead {
+			td {
+				border: 1px solid #2c868b;
+			}
+		}
+		tbody {
+			td {
+				border: 1px solid #e2e2e2;
+			}
+		}
+	}
+	.table-subtitle {
+		margin-bottom: 30px;
+		color: #525252;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 500;
 	}
 }

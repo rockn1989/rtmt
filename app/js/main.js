@@ -76,6 +76,26 @@ $('.pathners-slider').slick({
 			]
 		});
 
+/* DETAIL SLIDER */
+
+ $('.detail-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.detail-preview-slider'
+});
+
+$('.detail-preview-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.detail-slider',
+  dots: false,
+  infinity: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+
 /*** SVG FOR ALL BROWSERS ***/
 	svg4everybody();
 
@@ -125,6 +145,35 @@ $('[data-role="toggle-list"]').on('click', function() {
 	}
 });
 
+
+/*** CATALOG LEFT MENU ***/
+
+$('.catalog li.catalog-title.active').find('svg').addClass('open');
+
+//$('.catalog li.catalog-title:not(".active")').each(function(i, el) {
+//	$(el).find('ul').addClass('hidden');
+//});
+
+$('.catalog svg.page-icon').on('click', function(e) {
+	e.preventDefault();
+
+	$('.catalog li.catalog-title>ul').each(function(i, el) {
+		$(el)
+			.slideUp('350', function() {
+				$(this)
+					.siblings('a')
+					.find('svg')
+					.removeClass('open');
+			});	
+	});
+
+	$(this)
+		.toggleClass('open')
+		.parent()
+		.siblings('ul')
+		.slideToggle('350');
+
+});
 
 /*** DISABLED UIKIT ANIMATION FOR MOBILE ***/
 
