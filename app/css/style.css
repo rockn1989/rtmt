@@ -518,20 +518,40 @@ svg {
 }
 .main-slider .slick-dots {
   width: 300px;
-  left: 300px;
+  left: 10%;
+  bottom: 50%;
   text-align: left;
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .main-slider .slick-dots {
+    left: 5%;
+  }
+}
+.main-slider .slick-dots li {
+  margin: 0;
+  margin-bottom: 5px;
+  display: block;
+}
+.main-slider .slick-dots li button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
 }
 .main-slider .slick-dots li button:before {
   color: #006E72;
-  font-size: 12px;
+  font-size: 20px;
+}
+.main-slider .slick-dots li.slick-active button {
+  opacity: 1;
 }
 .main-slide {
   position: relative;
   height: 520px;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  -webkit-background-size: cover;
+          background-size: cover;
   margin-bottom: 50px;
 }
 @media (min-width: 0) and (max-width: 767px) {
@@ -1007,7 +1027,7 @@ svg {
         -ms-flex-order: 1;
             order: 1;
     border: 10px solid #ffffff;
-    border-width: 0 0 10px 10px;
+    border-width: 0 10px 10px 10px;
   }
   .block-img .img-wrapper {
     border: 10px solid #ffffff;
@@ -1503,10 +1523,26 @@ svg {
 }
 /***  CATALOG MENU ***/
 .catalog > ul {
+  position: relative;
   padding: 34px;
   padding-bottom: 0;
   border: 10px solid #f1f1f1;
+  border-right: 0;
   list-style: none;
+  z-index: 15;
+}
+.catalog > ul:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -40%;
+  width: 40%;
+  height: 50%;
+  display: block;
+  border: 10px solid #f1f1f1;
+  border-width: 10px 10px 0 0;
+  background: #ffffff;
+  z-index: 16;
 }
 .catalog > ul li.catalog-title {
   margin-bottom: 30px;
@@ -1515,12 +1551,6 @@ svg {
 }
 .catalog > ul li.catalog-title:last-child {
   border: none;
-}
-.catalog > ul li.catalog-title.active > ul {
-  display: block;
-}
-.catalog > ul li.catalog-title.active > a {
-  border-bottom: 3px solid #006e72;
 }
 .catalog > ul li.catalog-title > a {
   position: relative;
@@ -1545,7 +1575,13 @@ svg {
   -o-transition: all .3s linear;
   transition: all .3s linear;
 }
-.catalog > ul li.catalog-title > a svg.open {
+.catalog > ul li.catalog-title.active > ul {
+  display: block;
+}
+.catalog > ul li.catalog-title.active > a {
+  border-bottom: 3px solid #006e72;
+}
+.catalog > ul li.catalog-title.active > a svg {
   -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
           transform: rotate(0);
@@ -1622,9 +1658,41 @@ svg {
   line-height: 16px;
   font-weight: 500;
 }
+/*** DOCUMENTS UPLOAD DETAIL ***/
+.documents-upload {
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.documents-upload .document-wrapper {
+  margin-bottom: 40px;
+}
+.documents-upload a {
+  display: block;
+}
+.documents-upload a:hover {
+  opacity: .7;
+}
+.documents-upload svg {
+  fill: #006e72;
+}
+.documents-upload .document-img {
+  margin-right: 5%;
+  float: left;
+}
+.documents-upload .document-name {
+  color: #006e72;
+}
+.documents-upload .document-size {
+  color: #3b3b3b;
+}
 /*** DETAIL SLIDER ***/
 .detail-slider-wrapper {
+  position: relative;
+  margin-top: 30px;
   margin-bottom: 45px;
+  border-top: 10px solid #ffffff;
+  z-index: 20;
 }
 .detail-slider {
   margin-bottom: 20px;
