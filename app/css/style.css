@@ -1674,6 +1674,8 @@ svg {
   opacity: .7;
 }
 .documents-upload svg {
+  width: 26px;
+  height: 36px;
   fill: #006e72;
 }
 .documents-upload .document-img {
