@@ -24,7 +24,7 @@ gulp.task("clean", function() {
 gulp.task("less", function() {
 	return gulp.src("app/less/main.less")
 				.pipe(less())
-				.pipe(autoprefixer(["last 15 version", "> 1%", "ie 8", "ie 7"], {cascade: true}))
+				.pipe(autoprefixer(["last 15 version", "> 1%", 'firefox 14', "ie 8", "ie 7"], {cascade: true}))
 				.pipe(rename("style.css"))
 				.pipe(gulp.dest("app/css"))
 				.pipe(browserSync.reload({stream: true}))
@@ -33,7 +33,7 @@ gulp.task("less", function() {
 gulp.task("less:build", function() {
 	return gulp.src("app/less/main.less")
 				.pipe(less())
-				.pipe(autoprefixer(["last 15 version", "> 1%", "ie 8", "ie 7"], {cascade: true}))
+				.pipe(autoprefixer(["last 15 version", "> 1%", 'firefox 14', "ie 8", "ie 7"], {cascade: true}))
 				.pipe(gulp.dest("app/css"))
 				.pipe(rename("style.css"))
 				.pipe(gulp.dest("build/app/css"));
