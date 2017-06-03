@@ -908,6 +908,12 @@
 /*** BREADCRUMBS ***/
 
 .breadcrumbs {
+	@media @mob-w {
+		padding: 25px 0 0;
+	}
+	@media @tablet-w {
+		padding: 25px 0 0;
+	}
 	ul {
 		padding: 0;
 		list-style: none;
@@ -946,14 +952,22 @@
 /***  CATALOG MENU ***/
 
 .catalog {
-	&>ul {
 		position: relative;
 		padding: 34px;
-		padding-bottom: 0;
 		border: 10px solid #f1f1f1;
 		border-right: 0;
-		list-style: none;
-		z-index: 15;
+		@media @mob-w {
+			padding: 20px;
+			border-right: 10px solid #f1f1f1;
+		}
+		@media @tablet-w {
+			padding: 25px;
+			border-right: 10px solid #f1f1f1;
+			&>ul {
+				display: none;
+				margin: 0;
+			}
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -966,27 +980,26 @@
 			border-width: 10px 10px 0 0;
 			background: #ffffff;
 			z-index: 16;
-		}
-		li.catalog-title {
-			margin-bottom: 30px;
-			padding-right: 10px;
-			padding-bottom: 15px;
-			border-bottom: 1px solid #f1f1f1;
-			&:last-child {
-				border: none;
+			@media @mob-w {
+				display: none;
 			}
-			&>a {
-				position: relative;
-				padding-bottom: 15px;
-				display: block;
-				color: #006e72;
-				font-size: 16px;
-				font-weight: 900;
-				z-index: 14;
-				svg {
+			@media @tablet-w {
+				display: none;
+			}
+		}
+		a.title-link {
+			position: relative;
+			padding-right: 15px;
+			display: block;
+			color: #006e72;
+			font-size: 16px;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 1.6px;
+			&>svg {
 					position: absolute;
 					top: 5px;
-					right: -30px;
+					right: 8px;
 					display: block;
 					stroke: #006e72;
 					stroke-width: 3px;
@@ -1001,6 +1014,77 @@
 					visibility: visible;
 					use {
 						pointer-events: none;
+					}
+				}
+			&.active {
+				&>svg {
+					transform-origin: center;
+					transform: rotate(0);
+					width: 15px;
+					height: 15px;
+					stroke-width: 3px;
+					fill: #ffffff;
+				}
+			}
+		}
+	&>ul {
+		margin-top: 0;
+		padding: 0;
+		list-style: none;
+		z-index: 15;
+		@media @mob-w {
+			padding-top: 20px;
+		}
+		@media @tablet-w {
+			padding-top: 30px;
+		}
+		li.catalog-title {
+			margin-bottom: 30px;
+			padding-right: 10px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #f1f1f1;
+			@media @mob-w {
+				margin-bottom: 10px;
+			}
+			&:last-child {
+				border: none;
+				margin-bottom: 0;
+			}
+			&>a {
+				position: relative;
+				padding-bottom: 15px;
+				display: block;
+				color: #006e72;
+				font-size: 16px;
+				font-weight: 900;
+				z-index: 14;
+				&:hover {
+					text-decoration: none;
+				}
+				svg {
+					position: absolute;
+					top: 5px;
+					right: -30px;
+					display: block;
+					stroke: #006e72;
+					stroke-width: 3px;
+					fill: #006e72;
+					width: 10px;
+					height: 10px;
+					transform-certificate: center;
+					transform: rotate(-90deg);
+					-moz-transform: rotate(-45deg);
+					transition: width .3s, hegith 3s, stroke-width .3s, transform .3s linear;
+					z-index: 15;
+					visibility: visible;
+					use {
+						pointer-events: none;
+					}
+					@media @mob-w {
+						right: 0;
+					}
+					@media @tablet-w {
+						right: 0;
 					}
 				}
 			}
@@ -1030,7 +1114,7 @@
 						color: #3b3b3b;
 						font-weight: 900;
 					}
-				} 
+				}
 				a {
 					color: rgba(0, 110, 114, 0.75);
 					font-size: 14px;
@@ -1066,6 +1150,9 @@
 	text-align: center;
 	border-bottom: 1px solid #f1f1f1;
 	background: rgba(241, 241, 241, 0.1) url('../img/certificate-bg.png') repeat;
+	@media @mob-w {
+		padding: 25px;
+	}
 	.content-title {
 		text-align: center;
 		font-size: 18px;
@@ -1084,10 +1171,20 @@
 		margin-bottom: 30px;
 		font-size: 18px;
 	}
+	.table-subtitle {
+		margin-bottom: 30px;
+		color: #525252;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 500;
+	}
+}
+
 	table {
 		margin-bottom: 30px !important;
 		display: block;
 		width: 100%;
+		min-width: 500px;
 		border: 1px solid #006e72;
 		thead {
 			td {
@@ -1126,15 +1223,6 @@
 			}
 		}
 	}
-	.table-subtitle {
-		margin-bottom: 30px;
-		color: #525252;
-		font-size: 12px;
-		line-height: 16px;
-		font-weight: 500;
-	}
-}
-
 
 /*** DOCUMENTS UPLOAD DETAIL ***/
 
@@ -1165,5 +1253,15 @@
 	}
 	.document-size {
 		color: #3b3b3b;
+	}
+}
+
+
+.detail-slider-wrapper,
+.specifications,
+.certificate,
+.documents-upload {
+	@media @tablet-w {
+		margin-bottom: 20px;
 	}
 }

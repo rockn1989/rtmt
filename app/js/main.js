@@ -93,6 +93,7 @@ $('.detail-preview-slider').slick({
   slidesToScroll: 1,
   asNavFor: '.detail-slider',
   dots: false,
+  arrows: false,
   infinity: true,
   centerMode: true,
   focusOnSelect: true
@@ -152,6 +153,14 @@ $('[data-role="toggle-list"]').on('click', function() {
 
 $('.catalog li.catalog-title:not(".active")').each(function(i, el) {
 	$(el).find('ul').addClass('hidden');
+});
+
+$('.catalog a.title-link').on('click', function(e) {
+	e.preventDefault();
+	$(this)
+		.toggleClass('active')
+		.siblings('ul')
+		.slideToggle(350);
 });
 
 $('.catalog svg.page-icon').on('click', function(e) {
