@@ -133,7 +133,10 @@
     margin-bottom: 50px;
     padding: 30px 0;
   }
-
+	@media @tablet-w {
+		margin-bottom: 50px;
+		padding: 40px 0;
+	}
   .preview-news-head {
     margin-bottom: 80px;
 
@@ -409,6 +412,9 @@
   @media @mob-w {
   	margin-bottom: 40px;
   }
+  @media @tablet-w {
+  	margin-bottom: 40px;
+  }
   .img-title {
      background: url('../img/company-517-240.jpg') no-repeat;
      @media @mob-w {
@@ -618,7 +624,10 @@
   position: relative;
   margin-bottom: 90px;
   @media @mob-w {
-  	margin-bottom: 50px;
+  	margin-bottom: 30px;
+  }
+  @media @tablet-w {
+  	margin-bottom: 40px;
   }
   .block-desc {
     margin: 0 auto 0 0;
@@ -735,6 +744,7 @@
   	margin: 40px 0;
   }
   @media @tablet-w {
+  	margin: 40px 0;
   	padding: 35px 0 40px 5%;
   	&:after {
   		content: '';
@@ -790,7 +800,7 @@
 		margin: 0 0 0 auto;
 		max-width: 946px;
 		@media @mob-w {
-			padding: 55px 5%;
+			padding: 25px 5%;
 			p {
 				width: 100%;
 			}
@@ -799,6 +809,11 @@
 			padding: 55px 5%;
 			p {
 				width: 100%;
+			}
+		}
+		@media (min-width: 960px) and (max-width: 1300px) {
+			p {
+				width: 22%;
 			}
 		}
 	}
@@ -818,6 +833,12 @@
 			left: 50px;
 			width: 100%;
 			position: static;
+		}
+		@media (min-width: 960px) and (max-width: 1300px) {
+			width: 74%;
+		}
+		@media (min-width: 1300px) {
+			width: 56%;
 		}
 	}
 	.block-title {
@@ -893,6 +914,7 @@
 			background-image: url('../img/product-2.png');
 			background-position: center;
 			border: 20px solid #ffffff;
+			border-right: none;
 		}
 		&--3 {
 			width: 100%;
@@ -900,6 +922,7 @@
 			background-image: url('../img/product-3.png');
 			background-position: center;
 			border: 20px solid #ffffff;
+			border-right: none;
 		}
 	}
 }

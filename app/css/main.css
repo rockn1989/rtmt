@@ -95,13 +95,15 @@ svg {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .title.title--h1 {
+    margin: 15px 0;
     font-size: 24px;
-    line-height: 40px;
+    line-height: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .title.title--h1 {
-    font-size: 36px;
+    margin: 20px 0;
+    font-size: 30px;
   }
 }
 .block-title {
@@ -331,6 +333,9 @@ svg {
 .uk-grid.mobile-menu #offcanvas-menu .uk-nav li a {
   position: relative;
   color: #006f73;
+}
+.uk-grid.mobile-menu #offcanvas-menu .uk-nav li a:hover {
+  text-decoration: underline;
 }
 .uk-grid.mobile-menu #offcanvas-menu .uk-nav li svg.page-icon {
   position: absolute;
@@ -1541,6 +1546,16 @@ svg {
   border: 20px solid #ffffff;
 }
 /*** BREADCRUMBS ***/
+@media (min-width: 0) and (max-width: 767px) {
+  .breadcrumbs {
+    padding: 25px 0 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .breadcrumbs {
+    padding: 25px 0 0;
+  }
+}
 .breadcrumbs ul {
   padding: 0;
   list-style: none;
@@ -1572,16 +1587,29 @@ svg {
   color: #7f7f7f;
 }
 /***  CATALOG MENU ***/
-.catalog > ul {
+.catalog {
   position: relative;
   padding: 34px;
-  padding-bottom: 0;
   border: 10px solid #f1f1f1;
   border-right: 0;
-  list-style: none;
-  z-index: 15;
 }
-.catalog > ul:after {
+@media (min-width: 0) and (max-width: 767px) {
+  .catalog {
+    padding: 20px;
+    border-right: 10px solid #f1f1f1;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .catalog {
+    padding: 25px;
+    border-right: 10px solid #f1f1f1;
+  }
+  .catalog > ul {
+    display: none;
+    margin: 0;
+  }
+}
+.catalog:after {
   content: '';
   position: absolute;
   top: -10px;
@@ -1594,28 +1622,30 @@ svg {
   background: #ffffff;
   z-index: 16;
 }
-.catalog > ul li.catalog-title {
-  margin-bottom: 30px;
-  padding-right: 10px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #f1f1f1;
+@media (min-width: 0) and (max-width: 767px) {
+  .catalog:after {
+    display: none;
+  }
 }
-.catalog > ul li.catalog-title:last-child {
-  border: none;
+@media (min-width: 768px) and (max-width: 959px) {
+  .catalog:after {
+    display: none;
+  }
 }
-.catalog > ul li.catalog-title > a {
+.catalog a.title-link {
   position: relative;
-  padding-bottom: 15px;
+  padding-right: 15px;
   display: block;
   color: #006e72;
   font-size: 16px;
   font-weight: 900;
-  z-index: 14;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
 }
-.catalog > ul li.catalog-title > a svg {
+.catalog a.title-link > svg {
   position: absolute;
   top: 5px;
-  right: -30px;
+  right: 8px;
   display: block;
   stroke: #006e72;
   stroke-width: 3px;
@@ -1639,8 +1669,102 @@ svg {
   z-index: 15;
   visibility: visible;
 }
+.catalog a.title-link > svg use {
+  pointer-events: none;
+}
+.catalog a.title-link.active > svg {
+  -webkit-transform-origin: center;
+     -moz-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(0);
+     -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  width: 15px;
+  height: 15px;
+  stroke-width: 3px;
+  fill: #ffffff;
+}
+.catalog > ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 15;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .catalog > ul {
+    padding-top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .catalog > ul {
+    padding-top: 30px;
+  }
+}
+.catalog > ul li.catalog-title {
+  margin-bottom: 30px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .catalog > ul li.catalog-title {
+    margin-bottom: 10px;
+  }
+}
+.catalog > ul li.catalog-title:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+.catalog > ul li.catalog-title > a {
+  position: relative;
+  padding-bottom: 15px;
+  display: block;
+  color: #006e72;
+  font-size: 16px;
+  font-weight: 900;
+  z-index: 14;
+}
+.catalog > ul li.catalog-title > a:hover {
+  text-decoration: none;
+}
+.catalog > ul li.catalog-title > a svg {
+  position: absolute;
+  top: 5px;
+  right: -30px;
+  display: block;
+  stroke: #006e72;
+  stroke-width: 3px;
+  fill: #006e72;
+  width: 10px;
+  height: 10px;
+  transform-certificate: center;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transition: width 0.3s, hegith 3s, stroke-width 0.3s, -webkit-transform 0.3s linear;
+  transition: width 0.3s, hegith 3s, stroke-width 0.3s, -webkit-transform 0.3s linear;
+  -o-transition: width 0.3s, hegith 3s, stroke-width 0.3s, transform 0.3s linear;
+  -moz-transition: width 0.3s, hegith 3s, stroke-width 0.3s, transform 0.3s linear, -moz-transform 0.3s linear;
+  transition: width 0.3s, hegith 3s, stroke-width 0.3s, transform 0.3s linear;
+  transition: width 0.3s, hegith 3s, stroke-width 0.3s, transform 0.3s linear, -webkit-transform 0.3s linear, -moz-transform 0.3s linear;
+  z-index: 15;
+  visibility: visible;
+}
 .catalog > ul li.catalog-title > a svg use {
   pointer-events: none;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .catalog > ul li.catalog-title > a svg {
+    right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .catalog > ul li.catalog-title > a svg {
+    right: 0;
+  }
 }
 .catalog > ul li.catalog-title.active > ul {
   display: block;
@@ -1699,6 +1823,11 @@ svg {
   border-bottom: 1px solid #f1f1f1;
   background: rgba(241, 241, 241, 0.1) url('../img/certificate-bg.png') repeat;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .certificate {
+    padding: 25px;
+  }
+}
 .certificate .content-title {
   text-align: center;
   font-size: 18px;
@@ -1711,13 +1840,21 @@ svg {
   margin-bottom: 30px;
   font-size: 18px;
 }
-.table-specifications table {
+.table-specifications .table-subtitle {
+  margin-bottom: 30px;
+  color: #525252;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+table {
   margin-bottom: 30px !important;
   display: block;
   width: 100%;
+  min-width: 500px;
   border: 1px solid #006e72;
 }
-.table-specifications table thead td {
+table thead td {
   padding: 5px 0;
   text-align: center;
   color: #ffffff;
@@ -1725,10 +1862,10 @@ svg {
   font-weight: 300;
   border: 1px solid #2c868b;
 }
-.table-specifications table thead tr td:last-child {
+table thead tr td:last-child {
   border-right: 0;
 }
-.table-specifications table tbody td {
+table tbody td {
   color: #525252;
   text-align: center;
   font-size: 12px;
@@ -1737,20 +1874,13 @@ svg {
   vertical-align: middle;
   border: 1px solid #e2e2e2;
 }
-.table-specifications table tbody tr td:nth-child(1),
-.table-specifications table tbody tr td:nth-child(2) {
+table tbody tr td:nth-child(1),
+table tbody tr td:nth-child(2) {
   padding-left: 10px;
   text-align: left;
 }
-.table-specifications table tbody tr td:last-child {
+table tbody tr td:last-child {
   border-right: 0;
-}
-.table-specifications .table-subtitle {
-  margin-bottom: 30px;
-  color: #525252;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
 }
 /*** DOCUMENTS UPLOAD DETAIL ***/
 .documents-upload {
@@ -1781,6 +1911,14 @@ svg {
 }
 .documents-upload .document-size {
   color: #3b3b3b;
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .detail-slider-wrapper,
+  .specifications,
+  .certificate,
+  .documents-upload {
+    margin-bottom: 20px;
+  }
 }
 /*** DETAIL SLIDER ***/
 .detail-slider-wrapper {
