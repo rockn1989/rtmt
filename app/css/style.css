@@ -1638,10 +1638,6 @@ svg {
     padding: 25px;
     border-right: 10px solid #f1f1f1;
   }
-  .catalog > ul {
-    display: none;
-    margin: 0;
-  }
 }
 .catalog:after {
   content: '';
@@ -1690,10 +1686,10 @@ svg {
      -moz-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+  -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -moz-transform: rotate(-45deg);
   -webkit-transition: width 0.3s, hegith 3s, stroke-width 0.3s, -webkit-transform 0.3s linear;
   transition: width 0.3s, hegith 3s, stroke-width 0.3s, -webkit-transform 0.3s linear;
   -o-transition: width 0.3s, hegith 3s, stroke-width 0.3s, transform 0.3s linear;
@@ -1721,18 +1717,20 @@ svg {
   fill: #ffffff;
 }
 .catalog > ul {
-  margin-top: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   z-index: 15;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .catalog > ul {
+    display: none;
     padding-top: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .catalog > ul {
+    display: none;
     padding-top: 30px;
   }
 }
@@ -1773,7 +1771,10 @@ svg {
   fill: #006e72;
   width: 10px;
   height: 10px;
-  transform-certificate: center;
+  -webkit-transform-origin: center;
+     -moz-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);

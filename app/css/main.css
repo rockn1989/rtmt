@@ -170,7 +170,7 @@ svg {
     -webkit-animation: none !important;
        -moz-animation: none !important;
             animation: none !important;
-    opacity: 1;
+    opacity: 1 !important;
   }
 }
 /*** HEADER ***/
@@ -666,6 +666,12 @@ svg {
     padding: 30px 0;
   }
 }
+@media (min-width: 768px) and (max-width: 959px) {
+  .preview-news-all {
+    margin-bottom: 50px;
+    padding: 40px 0;
+  }
+}
 .preview-news-all .preview-news-head {
   margin-bottom: 80px;
 }
@@ -933,6 +939,11 @@ svg {
   margin-bottom: 90px;
 }
 @media (min-width: 0) and (max-width: 767px) {
+  .innovations {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
   .innovations {
     margin-bottom: 40px;
   }
@@ -1207,7 +1218,12 @@ svg {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .our-manufac {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .our-manufac {
+    margin-bottom: 40px;
   }
 }
 .our-manufac .block-desc {
@@ -1340,6 +1356,7 @@ svg {
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .our-staff {
+    margin: 40px 0;
     padding: 35px 0 40px 5%;
   }
   .our-staff:after {
@@ -1407,7 +1424,7 @@ svg {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .products .block-desc {
-    padding: 55px 5%;
+    padding: 25px 5%;
   }
   .products .block-desc p {
     width: 100%;
@@ -1419,6 +1436,11 @@ svg {
   }
   .products .block-desc p {
     width: 100%;
+  }
+}
+@media (min-width: 960px) and (max-width: 1300px) {
+  .products .block-desc p {
+    width: 22%;
   }
 }
 .products .block-img {
@@ -1449,6 +1471,16 @@ svg {
     left: 50px;
     width: 100%;
     position: static;
+  }
+}
+@media (min-width: 960px) and (max-width: 1300px) {
+  .products .block-img {
+    width: 74%;
+  }
+}
+@media (min-width: 1300px) {
+  .products .block-img {
+    width: 56%;
   }
 }
 .products .block-title {
@@ -1537,6 +1569,7 @@ svg {
   background-image: url('../img/product-2.png');
   background-position: center;
   border: 20px solid #ffffff;
+  border-right: none;
 }
 .products .products-block--3 {
   width: 100%;
@@ -1544,6 +1577,7 @@ svg {
   background-image: url('../img/product-3.png');
   background-position: center;
   border: 20px solid #ffffff;
+  border-right: none;
 }
 /*** BREADCRUMBS ***/
 @media (min-width: 0) and (max-width: 767px) {
