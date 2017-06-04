@@ -96,7 +96,31 @@ $('.detail-preview-slider').slick({
   arrows: false,
   infinity: true,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+	responsive: [
+					{
+						breakpoint: 1025,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 940,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 });
 
 /*** SVG FOR ALL BROWSERS ***/

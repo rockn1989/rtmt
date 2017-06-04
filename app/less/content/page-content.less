@@ -1066,6 +1066,7 @@
 			border-bottom: 1px solid #f1f1f1;
 			@media @mob-w {
 				margin-bottom: 10px;
+				padding-right: 25px;
 			}
 			&:last-child {
 				border: none;
@@ -1102,7 +1103,7 @@
 						pointer-events: none;
 					}
 					@media @mob-w {
-						right: 0;
+						right: -18px;
 					}
 					@media @tablet-w {
 						right: 0;
@@ -1284,5 +1285,119 @@
 .documents-upload {
 	@media @tablet-w {
 		margin-bottom: 20px;
+	}
+}
+
+/*** CERTIFICATES PAGE ***/
+
+.certif-wrapper {
+	margin-bottom: 50px !important;
+	@media @mob-w {
+		margin-bottom: 30px !important;
+	}
+	.certif-img {
+		margin-bottom: 25px;
+		padding: 30px 40px;
+		max-height: 320px;
+		text-align: center;
+		background-color: #f6f6f6;
+		@media @mob-w {
+			padding: 15px 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.certif-desc {
+		margin-bottom: 25px;
+		color: #3b3b3b;
+		min-height: 60px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+	}
+	.upload-link {
+		color: #2c868b;
+		font-size: 12px;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+}
+
+/*** INFO CARDS ***/
+
+.info-card {
+	position: relative;
+	display: flex;
+	min-height: 100%;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin-bottom: 35px !important;
+	padding: 20px 10px 20px 20px;
+	max-width: 172px;
+	min-height: 200px;
+	border: 10px solid #f1f1f1;
+	z-index: 11;
+	transition: border-color .2s linear;
+	&:after {
+		content: '';
+		position: absolute;
+		top: -9px;
+		right: -9px;
+		width: 33px;
+		height: 43px;
+		display: block;
+		z-index: 12;
+		background: #ffffff;
+		border-left: 10px solid #f1f1f1;
+		transform: rotate(-45deg) translateX(50%);
+		transition: border-color .2s linear;
+	}
+	&:hover {
+		border-color: #006e72;
+		&:after {
+			border-color: #006e72;
+			background: transparent;
+			box-shadow: inset 23px 0 0px 0px #ffffff;
+		}
+	}
+	.info-title {
+		margin-bottom: 15px;
+		width: 100%;
+		color: #3b3b3b;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+		//align-self: flex-start;
+	}
+	.info-file-size {
+		width: 100%;
+		display: block;
+		color: #006e72;
+		font-size: 12px;
+		font-weight: 900;
+		text-transform: uppercase;
+		//align-self: flex-end;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		span {
+			display: block;
+			color: #7f7f7f;
+			font-size: 13px;
+			font-weight: 500;
+			text-transform: none;
+		}
+	}
+	.download-img {
+		float: left;
+		margin-right: 10%;
+		svg {
+			fill: #006e72;
+			width: 15px;
+			height: 35px;
+		}
 	}
 }
