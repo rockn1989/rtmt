@@ -164,7 +164,8 @@ svg {
 @media (min-width: 0) and (max-width: 767px) {
   .preview-news-block,
   .img-title,
-  .products-block {
+  .products-block,
+  .answer {
     display: block !important;
     visibility: visible !important;
     -webkit-animation: none !important;
@@ -2157,6 +2158,80 @@ table tbody tr td:last-child {
   fill: #006e72;
   width: 15px;
   height: 35px;
+}
+/*** FAQ BLOCK ***/
+.faq-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #3b3b3b;
+}
+.faq-list li {
+  position: relative;
+  margin-bottom: 160px;
+  padding: 54px 20px 98px 128px;
+  border: 10px solid #f1f1f1;
+  max-width: 947px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .faq-list li {
+    margin-bottom: 30px;
+    padding: 25px 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .faq-list li {
+    margin-bottom: 50px;
+    padding-bottom: 54px;
+  }
+}
+.faq-list li:after {
+  content: '';
+  position: absolute;
+  top: 65px;
+  left: 5%;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #006e72;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .faq-list li:after {
+    display: none;
+  }
+}
+.faq-list li div.answer {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 100%;
+  padding: 45px 60px;
+  background-color: #f1f1f1;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .faq-list li div.answer {
+    margin-top: 20px;
+    position: static;
+    padding: 15px 10px;
+    border-left: 5px solid #006e72;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .faq-list li div.answer {
+    margin-top: 30px;
+    padding: 15px 30px;
+    position: static;
+    top: 90%;
+    left: 0;
+  }
+}
+@media (min-width: 960px) and (max-width: 1110px) {
+  .faq-list li div.answer {
+    width: 80%;
+  }
 }
 /*** DETAIL SLIDER ***/
 .detail-slider-wrapper {
