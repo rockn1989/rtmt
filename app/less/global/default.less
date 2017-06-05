@@ -124,7 +124,9 @@ svg {
 .preview-news-block,
 .img-title,
 .products-block,
-.answer {
+.answer,
+.company-desc,
+.company-event-img {
 	@media @mob-w {
     display: block !important;
     visibility: visible !important;
@@ -181,11 +183,16 @@ svg {
 				background: transparent;
 			}
 		}
-		&.uk-pagination-next {
+		&.uk-pagination-next,
+		&.uk-pagination-prev {
 			margin-left: 60px;
 			a {
 				padding: 15px;
 			}
+		}
+		&.uk-pagination-prev {
+			margin-left: 0;
+			margin-right: 60px;
 		}
 	}
 }
