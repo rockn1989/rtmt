@@ -167,7 +167,8 @@ svg {
   .products-block,
   .answer,
   .company-desc,
-  .company-event-img {
+  .company-event-img,
+  .list-date-item {
     display: block !important;
     visibility: visible !important;
     -webkit-animation: none !important;
