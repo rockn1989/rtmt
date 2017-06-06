@@ -219,6 +219,9 @@ svg {
   text-transform: uppercase;
   background: transparent;
 }
+.uk-pagination li a:hover {
+  background: transparent;
+}
 .uk-pagination li a svg {
   fill: #006e72;
   width: 30px;
@@ -1992,7 +1995,9 @@ table tbody tr td:last-child {
 /*** DOCUMENTS UPLOAD DETAIL ***/
 .documents-upload {
   margin-bottom: 45px;
-  padding-bottom: 30px;
+  padding: 30px;
+  padding-bottom: 0;
+  background: rgba(241, 241, 241, 0.1) url('../img/certificate-bg.png') repeat;
   border-bottom: 1px solid #f1f1f1;
 }
 .documents-upload .document-wrapper {
@@ -2245,6 +2250,11 @@ table tbody tr td:last-child {
 .company-head {
   position: relative;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .company-head {
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
   .company-head {
     margin-bottom: 50px;
@@ -2268,6 +2278,13 @@ table tbody tr td:last-child {
   max-width: 561px;
   background-color: #006e72;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .company-head .company-desc {
+    padding: 20px 10px;
+    position: static;
+    max-width: 100%;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
   .company-head .company-desc {
     padding: 30px 25px;
@@ -2285,6 +2302,11 @@ table tbody tr td:last-child {
   left: -100%;
   background: #006e72;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .company-head .company-desc:before {
+    width: 0;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
   .company-head .company-desc:before {
     width: 0;
@@ -2296,6 +2318,11 @@ table tbody tr td:last-child {
   font-size: 18px;
   font-weight: 900;
   line-height: 24px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .company-head .company-desc .block-title {
+    margin-bottom: 30px;
+  }
 }
 .company-head .company-desc .block-desc {
   padding: 0;
@@ -2311,6 +2338,11 @@ table tbody tr td:last-child {
   padding: 0;
   list-style: none;
   font-size: 0;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .list-date {
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .list-date {
@@ -2334,8 +2366,10 @@ table tbody tr td:last-child {
 .list-date li:nth-child(3n) .date:after {
   width: 0;
 }
-.list-date li:nth-last-child(-n+3) {
-  margin-bottom: 0;
+@media (min-width: 960px) {
+  .list-date li:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
 }
 .list-date li:nth-child(4) .date:after {
   width: 200%;
@@ -2361,6 +2395,11 @@ table tbody tr td:last-child {
   font-size: 60px;
   font-weight: 900;
   text-transform: uppercase;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .list-date .date {
+    margin-bottom: 0px;
+  }
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .list-date .date {
@@ -2392,6 +2431,12 @@ table tbody tr td:last-child {
   .list-date .date:before,
   .list-date .date:after {
     width: 0;
+  }
+}
+@media (min-width: 960px) and (max-width: 1300px) {
+  .list-date .date:before,
+  .list-date .date:after {
+    width: 40%;
   }
 }
 .list-date .date:before {
@@ -2462,7 +2507,7 @@ table tbody tr td:last-child {
   }
   .list-date--two-columns li:nth-child(even) .date:before {
     left: 40%;
-    width: 100%;
+    width: 75%;
     max-width: 100%;
   }
   .list-date--two-columns li:last-child .date:after {
@@ -2471,6 +2516,11 @@ table tbody tr td:last-child {
   }
   .list-date--two-columns li:last-child .date:before {
     width: 0;
+  }
+}
+@media (min-width: 960px) and (min-width: 960px) and (max-width: 1300px) {
+  .list-date--two-columns li:nth-child(even) .date:before {
+    width: 50%;
   }
 }
 @media (min-width: 960px) and (min-width: 0) and (max-width: 767px) {
@@ -2492,6 +2542,12 @@ table tbody tr td:last-child {
   margin-bottom: 100px;
   padding: 63px 90px;
   max-width: 944px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .company-event {
+    margin-bottom: 30px;
+    padding: 25px 15px;
+  }
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .company-event {
@@ -2534,6 +2590,12 @@ table tbody tr td:last-child {
     width: 0;
   }
 }
+@media (min-width: 960px) and (max-width: 1300px) {
+  .company-event .date:before,
+  .company-event .date:after {
+    width: 50%;
+  }
+}
 .company-event .date:before {
   left: 50%;
 }
@@ -2555,7 +2617,17 @@ table tbody tr td:last-child {
   top: 5%;
   right: -200px;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .company-event .company-event-img {
+    display: none !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
+  .company-event .company-event-img {
+    display: none;
+  }
+}
+@media (min-width: 960px) and (max-width: 1300px) {
   .company-event .company-event-img {
     display: none;
   }
@@ -2580,6 +2652,120 @@ table tbody tr td:last-child {
 .company-target .company-target-desc {
   font-weight: 300;
   line-height: 28px;
+}
+/* AUTH BLOCK */
+.auth-block {
+  padding: 80px 0;
+  background: url('../img/certificate-bg.png') repeat;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .auth-block {
+    padding: 40px 0;
+  }
+}
+.auth-block .uk-grid > div {
+  position: relative;
+}
+.auth-block .auth-form {
+  margin-top: 50px;
+  max-width: 849px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .auth-block .auth-form {
+    margin-top: 25px;
+  }
+}
+.auth-block .auth-form input:not([type="file"]),
+.auth-block .auth-form textarea {
+  padding: 0;
+  padding-top: 5px;
+  margin-bottom: 40px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  border-bottom: 3px solid #006e72;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .auth-block .auth-form input:not([type="file"]),
+  .auth-block .auth-form textarea {
+    margin-bottom: 20px;
+  }
+}
+.auth-block .auth-form input:not([type="file"]):focus,
+.auth-block .auth-form textarea:focus {
+  background: transparent;
+  border-color: #9ae0e2;
+}
+.auth-block .auth-form input:not([type="file"]).error,
+.auth-block .auth-form textarea.error {
+  border-color: red;
+}
+.auth-block .auth-form textarea {
+  margin-top: 15px;
+  height: 100px;
+}
+.auth-block .auth-form label:not([for="auth-file"]) {
+  position: absolute;
+  top: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #7f7f7f;
+  -webkit-transition: top 0.3s, font-size 0.3s linear;
+  -o-transition: top 0.3s, font-size 0.3s linear;
+  -moz-transition: top 0.3s, font-size 0.3s linear;
+  transition: top 0.3s, font-size 0.3s linear;
+}
+.auth-block .auth-form label.focus {
+  top: -5px;
+  font-size: 14px;
+}
+.auth-block .auth-form button {
+  margin: 0;
+  padding: 17px 0;
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-border-radius: 38px;
+          border-radius: 38px;
+}
+.auth-block .auth-form button:hover {
+  color: #ffffff;
+  background: #006e72;
+}
+.auth-block .auth-form input[type="file"] {
+  display: none;
+}
+.auth-block .auth-form .auth-upload-file {
+  position: relative;
+  width: 100%;
+}
+.auth-block .auth-form .auth-upload-file .delete-file {
+  margin-left: 10px;
+}
+.auth-block .auth-form .auth-upload-file svg {
+  fill: #e15959;
+}
+.auth-block .auth-form .auth-upload-file svg:hover {
+  cursor: pointer;
+}
+.auth-block .auth-form .add-file {
+  margin: 30px 0;
+  display: inline-block;
+  vertical-align: top;
+  color: #006e72;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.auth-block .auth-form .add-file:hover {
+  cursor: pointer;
 }
 /*** DETAIL SLIDER ***/
 .detail-slider-wrapper {

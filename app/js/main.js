@@ -215,6 +215,33 @@ $('.catalog svg.page-icon').on('click', function(e) {
 
 });
 
+/* FORM MASK */
+
+$('input[name="auth-tel"]').mask("+7 (999) 999-9999");
+
+/* FORM EVENTS */
+
+$('.auth-form input, .auth-form textarea').on('focus', function() {
+	$(this).siblings('label').addClass('focus');
+});
+
+$('.auth-form input, .auth-form textarea').on('blur', function() {
+	if($(this).val().length <= 1) {
+		$(this).siblings('label').removeClass('focus');
+	} 
+});
+
+$('.js__auth-file').on('change', function() {
+	$('.delete-file').toggleClass('hidden');
+	$('.auth-upload-file span').text($(this).val().replace(/C:\\fakepath\\/i, ''));
+});
+
+$('.delete-file').on('click', function() {
+	$('.js__auth-file').val('');
+	$('.auth-upload-file span').text('');
+	$(this).toggleClass('hidden');
+})
+
 /*** DISABLED UIKIT ANIMATION FOR MOBILE ***/
 
 UIkit.on('beforeready.uk.dom', function () {
