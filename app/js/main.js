@@ -327,9 +327,7 @@ $('.show-text').on('click', function(e) {
 	$(this)
 		.toggleClass('open')
 		.siblings('.hidden-text')
-		.slideToggle('350', function() {
-			
-		});
+		.slideToggle('350');
 })
 
 });
