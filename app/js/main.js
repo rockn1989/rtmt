@@ -330,5 +330,37 @@ $('.show-text').on('click', function(e) {
 		.slideToggle('350');
 })
 
+/*** SHOW COMPANY IMG ***/
+
+if($('div').is('.company-img-list')) {
+	$('.item-img').each(function(i, el) {
+		if(i >= 0 && i <= 3) {
+			return;
+		} else {
+			$(el).addClass('hidden');
+			$(el).parent().addClass('hidden');
+		}
+	})
+}
+
+$('.show-company-img').on('click', function(e) {
+	e.preventDefault();
+	var hiddenBlocks = $('.item-img.hidden').length;
+	if(hiddenBlocks > 4) {
+		$('.item-img.hidden').each(function(i, el) {
+			if(i <= 3) {
+				$(el).removeClass('hidden')
+				$(el).parent().removeClass('hidden')
+			}
+		});
+	} else {
+		$('.item-img.hidden').each(function(i, el) {
+			$(el).removeClass('hidden')
+			$(el).parent().removeClass('hidden')
+		});
+	}
+
+})
+
 });
 
