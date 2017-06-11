@@ -338,7 +338,6 @@ if($('div').is('.company-img-list')) {
 			return;
 		} else {
 			$(el).addClass('hidden');
-			$(el).parent().addClass('hidden');
 		}
 	})
 }
@@ -350,14 +349,12 @@ $('.show-company-img').on('click', function(e) {
 	if(hiddenBlocks > 4) {
 		$('.item-img.hidden').each(function(i, el) {
 			if(i <= 3) {
-				$(el).removeClass('hidden')
-				$(el).parent().removeClass('hidden')
+				$(el).removeClass('hidden');
 			}
 		});
 	} else {
 		$('.item-img.hidden').each(function(i, el) {
-			$(el).removeClass('hidden')
-			$(el).parent().removeClass('hidden')
+			$(el).removeClass('hidden');
 		});
 	}
 
