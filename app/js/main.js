@@ -228,7 +228,7 @@ $(function() {
 	$('.default-form input, .default-form textarea').on('blur', function() {
 		if($(this).val().length <= 1) {
 			$(this).siblings('label').removeClass('focus');
-		} 
+		}
 	});
 
 	$('.js__auth-file').on('change', function() {
@@ -345,6 +345,7 @@ if($('div').is('.company-img-list')) {
 
 $('.show-company-img').on('click', function(e) {
 	e.preventDefault();
+	$('.company-img-list').trigger('resize');
 	var hiddenBlocks = $('.item-img.hidden').length;
 	if(hiddenBlocks > 4) {
 		$('.item-img.hidden').each(function(i, el) {

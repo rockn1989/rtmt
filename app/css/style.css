@@ -3320,6 +3320,11 @@ table tbody tr td:last-child {
   font-weight: 900;
   text-transform: uppercase;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .show-company-img {
+    margin-top: 30px;
+  }
+}
 .show-company-img:hover {
   text-decoration: none;
   opacity: .7;
