@@ -215,14 +215,58 @@ $(function() {
 
 	});
 
+	/*** FORM VALIDATE ***/
+	if($('form').is('#auth-form')) {
+
+		$('#auth-form').validate({
+			rules: {
+				name: {
+					required: true
+				},
+				email: {
+					email: true,
+					required: true
+				}
+			},
+			messages: {
+				name: "Обязательноe поле",
+				email: "Обязательноe поле"
+			}
+		});
+	}
+
+	if($('form').is('#order-form')) {
+
+		$('#order-form').validate({
+			rules: {
+				name: {
+					required: true
+				},
+				email: {
+					email: true,
+					required: true
+				},
+				textarea: {
+					required: true
+				}
+			},
+			messages: {
+				name: "Обязательноe поле",
+				email: "Обязательноe поле",
+				textarea: "Обязательноe поле"
+			}
+		});
+	}
+
+
 	/* FORM MASK */
 
-	$('input[name="auth-tel"]').mask("+7 (999) 999-9999");
+	$('.auth-form input[name="tel"]').mask("+7 (999) 999-9999");
 
 	/* FORM EVENTS */
 
 	$('.default-form input, .default-form textarea').on('focus', function() {
-		$(this).siblings('label').addClass('focus');
+		$(this).siblings('label:not([class="error"])').addClass('focus');
 	});
 
 	$('.default-form input, .default-form textarea').on('blur', function() {
@@ -242,21 +286,8 @@ $(function() {
 		$(this).toggleClass('hidden');
 	})
 
-	/*** FORM VALIDATE ***/
-/*
-	$('.auth-form').validate({
-		rules: {
-			name: {
-				reqired: true,
-				minlenght: 4,
-				maxlength: 32
-			}
-		},
-		submitHandler: function() {
-		    return false;
-		  }
-	});
-*/
+
+
 	/*** DISABLED UIKIT ANIMATION FOR MOBILE ***/
 
 	UIkit.on('beforeready.uk.dom', function () {
@@ -362,4 +393,3 @@ $('.show-company-img').on('click', function(e) {
 })
 
 });
-

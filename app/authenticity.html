@@ -12,14 +12,14 @@
 	<meta property="og:title" content="">
 	<meta property="og:description" content="">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-	<link rel="stylesheet" href="js/libs/css/uikit.min.css">
-	<link rel="stylesheet" href="js/libs/slick/slick.css">
-	<link rel="stylesheet" href="js/libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/css/uikit.min.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		<script src="js/libs/html5shiv.min.js"></script>
-		<script src="js/libs/placholder.js"></script>
+		<script src="libs/html5shiv.min.js"></script>
+		<script src="libs/placholder.js"></script>
 	<![endif]-->
 </head>
 <body>
@@ -184,11 +184,11 @@
 					Если вы хотите проверить подлинность приобретенной продукции с маркировкой РТМТ, заполните поля формы, и наш менеджер свяжется с Вами в ближайшее время.
 				</p>
 				<div class="auth-form-wrapper">
-					<form action="" class="default-form auth-form uk-form" method="post">
+					<form id="auth-form" action="" class="default-form auth-form uk-form" method="post">
 						<div class="uk-grid">
 							<div class="uk-width-1-1">
 								<label for="product">Заводской номер продукции</label>
-								<input type="text" id="product">
+								<input type="text" name="product" id="product">
 							</div>
 							<div class="uk-width-1-1 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-4-10">
 								<label for="name">Имя</label>
@@ -281,11 +281,11 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js" defer></script>
-	<script src="js/libs/svg4everybody.min.js" defer></script>
-	<script src="js/libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
-	<script src="js/libs/js/uikit.min.js" defer></script>
-	<script src="js/libs/slick/slick.min.js" defer></script>
+	<script src="libs/svg4everybody.min.js" defer></script>
+	<script src="libs/jquery.validate.min.js" defer></script>
+	<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/js/uikit.min.js" defer></script>
+	<script src="libs/slick/slick.min.js" defer></script>
 	<script src="js/main.js" defer></script>
 </body>
 </html>
