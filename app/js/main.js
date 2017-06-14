@@ -356,6 +356,7 @@ $('.show-company-img').on('click', function(e) {
 		$('.item-img.hidden').each(function(i, el) {
 			$(el).removeClass('hidden');
 		});
+		$(this).fadeOut('350');
 	}
 
 })

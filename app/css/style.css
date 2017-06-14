@@ -150,6 +150,11 @@ svg {
       -ms-transform-origin: 0 center;
           transform-origin: 0 center;
 }
+@media (min-width: 768px) and (max-width: 959px) {
+  .block-title.block-title--vertical {
+    padding-bottom: 5px;
+  }
+}
 .content-title {
   margin-bottom: 50px;
   color: #3b3b3b;
@@ -371,7 +376,7 @@ svg {
   -o-transition: top 0.3s, visibility 0s, opacity 0.3s ease-out;
   -moz-transition: top 0.3s, visibility 0s, opacity 0.3s ease-out;
   transition: top 0.3s, visibility 0s, opacity 0.3s ease-out;
-  z-index: 30;
+  z-index: 130;
 }
 .nav-list .nav-list-sublist li {
   display: block;
@@ -779,7 +784,7 @@ svg {
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .preview-news-all .preview-news-head {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 .preview-news-all .preview-news-head:after {
@@ -1042,7 +1047,7 @@ svg {
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .innovations {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
   }
 }
 .innovations .img-title {
@@ -1311,7 +1316,7 @@ svg {
 /*** MAIN PAGE OUR MANUFAC BLOCK ***/
 .our-manufac {
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 130px;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .our-manufac {
@@ -1441,7 +1446,7 @@ svg {
 /*** MAIN PAGE OUR STAFF BLOCK ***/
 .our-staff {
   position: relative;
-  margin: 240px auto 190px;
+  margin: 170px auto;
   padding: 65px 0 72px 8%;
   max-width: 850px;
 }
@@ -1453,7 +1458,7 @@ svg {
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .our-staff {
-    margin: 40px 0;
+    margin: 40px 0 90px;
     padding: 35px 0 40px 5%;
   }
   .our-staff:after {
@@ -3098,6 +3103,11 @@ table tbody tr td:last-child {
 .product-list .product-item {
   margin-bottom: 20px;
   padding-bottom: 20px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .product-list .product-item {
+    border-bottom: 1px solid #dad8d8;
+  }
 }
 .product-list .product-img {
   margin-bottom: 25px;
